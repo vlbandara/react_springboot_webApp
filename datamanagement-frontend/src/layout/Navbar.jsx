@@ -1,12 +1,13 @@
 import React from "react";
-
+import './Navbar.css';  
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-teal">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            Navbar
+            User Management System
           </a>
           <button
             class="navbar-toggler"
@@ -19,7 +20,8 @@ function Navbar() {
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
+          <Link className="btn btn-outline-light" to='/addUser'>Add User</Link>
+         </div>
       </nav>
     </div>
   );

@@ -1,0 +1,59 @@
+.custom-header {
+    background-color: teal;
+    color: white;
+  }
+
+.btn-teal{
+    background-color: teal;
+    color: white;
+  }
+
+  .btn-teal:hover{
+    background-color: #008080;
+    color: white;
+  }
+
+  .btn-teal:active{
+    background-color: #008080;
+    color: white;
+  }
+
+  .btn-teal:focus{
+    background-color: #008080;
+    color: white;
+  }
+
+  .btn-teal:visited{
+    background-color: #008080;
+    color: white;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-teal {
+    background-color: teal;
+    color: white;
+    border: none;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.btn-outline-teal {
+    background-color: white;
+    color: teal;
+    border: 1px solid teal;
+}
+
+.btn-outline-teal:hover {
+    background-color: teal;
+    color: white;
+}
