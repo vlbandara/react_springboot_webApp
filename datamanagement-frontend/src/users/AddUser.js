@@ -7,7 +7,11 @@ export default function AddUser() {
         username: '',
         email: ''
     })
-    const {name, username, email} = user;
+    const {name, username, email} = user
+
+    const onInputChange = e => {
+        setName({...user, [e.target.name]: e.target.value})
+    }
   return (
     
     
@@ -19,20 +23,20 @@ export default function AddUser() {
             <form>
                 <div className="form-group">
                     <label htmlFor="name"><strong>Name</strong></label>
-                    <input type="text" className="form-control"  placeholder="Enter Name" value={name} />
+                    <input type="text" className="form-control"  placeholder="Enter Name" value={name} onChange={(e)=>onInputChange(e)} />
                 </div>
                 <div className="form-group mt-3">
                     <label htmlFor="username"><strong>Username</strong></label>
-                    <input type="text" className="form-control"  placeholder="Enter Username" value={username}/>
+                    <input type="text" className="form-control"  placeholder="Enter Username" value={username} onChange={(e)=>onInputChange(e)}/>
                 </div>
                 <div className="form-group mt-3">
                     <label htmlFor="email"><strong>Email address</strong></label>
-                    <input type="email" className="form-control"  placeholder="Enter email" value={email}/>
+                    <input type="email" className="form-control"  placeholder="Enter email" value={email} onChange={(e)=>onInputChange(e)}/>
                 </div>
                 <button type="submit" className="btn btn-outline-teal rounded mt-3 mx-2">
                     <h5 className='text-center pt-1'>Submit</h5>
                 </button><button type="submit" className="btn btn-outline-danger rounded mt-3">
-                    <h5 className='text-center pt-1'>Submit</h5>
+                    <h5 className='text-center pt-1'>Cancel</h5>
                 </button>
 
             </form>
