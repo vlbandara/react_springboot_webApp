@@ -1,5 +1,6 @@
 package com.vinodhlb.dataManagementbackend.controller;
 
+import com.vinodhlb.dataManagementbackend.execption.UserNotFoundException;
 import com.vinodhlb.dataManagementbackend.model.User;
 import com.vinodhlb.dataManagementbackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,9 @@ public class UserController {
     @GetMapping("/users")
     List<User> getAllUsers() {
         return userRepository.findAll();
+    }
+    @GetMapping("/user/{id}")
+    User getUser(@PathVariable Long id) {
+        return userRepository.findById(id).orElseThrow(()->new UserNotFoundException(id));
     }
 }
